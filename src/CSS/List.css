@@ -1,0 +1,59 @@
+/* Insert CSS for List Component */
+
+.list-recipe {
+
+    width: 100vw;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.154);
+    font-size: medium;
+    border-radius: 24px;
+    backdrop-filter: blur(4px);
+    background: rgba(226, 221, 221, 0.87);
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    
+}
+
+.filters {
+    padding-bottom: 20px;
+    padding-top:10px;
+    display: flex;
+}
+
+.vegetarian-filter {
+    margin-right: 18px;
+}
+
+.dairy-filter {
+    margin-right: 10px;
+}
+
+.btn {
+    color:white;
+    font-family: 'Avenir';
+    background-color: darkslateblue;
+    padding: 0.2em 1.2em;
+}
+
+th {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-right: 50px;
+}
+
+td {
+    width: 1000px;
+}
+
+table {
+    margin-left:10px;
+    text-align: center;
+    border-spacing: 10px;
+  }
+
+  form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 11% !important;
+  }
