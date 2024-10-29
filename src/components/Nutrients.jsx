@@ -7,55 +7,56 @@ import {
     XAxis,
     YAxis,
     Tooltip,
+    Legend,
     Label
   } from "recharts";
-  
-
-const API_KEY = import.meta.env.VITE_API_KEY;
 
 const Nutrients = ({recipeList}) => {
 
     const [data, setData] = useState([]);
-    const [recipeDetails, setRecipeList] = useState([]);
-
-    const cleanData = (recipesDetails) => {
-
-        let filteredData = [];
-
-        Object.values(recipesDetails).forEach(value => {
-           // console.log("loop " + value.nutrition.caloricBreakdown.percentCarbs);
-            filteredData.push({
-                'name': value.title,
-                'percentCarb': value.nutrition.caloricBreakdown.percentCarbs
-            })
-        });
-        setData(filteredData);
-        return filteredData;
-    }
+    const [recipeDetails, setRecipeDetails] = useState([]);
 
     useEffect(() => {
-        // const getCoinHist = async () => {
-        //     const response = await fetch(
-        //         "https://api.spoonacular.com/recipes/complexSearch?query=pasta&query=pizza&addRecipeNutrition=true&number=12&apiKey="
-        //         + API_KEY
-        //     );
-        
-        //     const recipes = await response.json();
-        //     setRecipeList(recipes.results)
-        //   };
-        //   getCoinHist().catch(console.error);
-        setRecipeList(recipeList);
+
+        const cleanData = () => {
+
+            let filteredData = [];
+    
+            Object.values(recipeDetails).forEach(value => {
+               console.log("loop " + value.nutrition.caloricBreakdown.percentCarbs);
+                filteredData.push({
+                    name: value.title,
+                    percentCarb: value.nutrition.caloricBreakdown.percentCarbs
+                })
+            });
+            setData(filteredData);
+        }
+
+        console.log("nutrient")
         console.log(recipeList);
-    },);
+        setRecipeDetails(recipeList);
+        cleanData();
+        console.log(recipeList);
+    }, [1000]);
 
     
    return(
     <>
-    {/* <BarChart width={600} height={300} data={data}>
+    <div>
+            <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+                <Line type="monotone" dataKey="percentCarb" stroke="#8884d8" />
+                <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+            </LineChart>
+        </div>
+     {/* <BarChart width={600} height={300} data={data}>
             <XAxis dataKey="name" stroke="#8884d8" />
             <YAxis />
+            
             <Bar dataKey="percentCarb" fill="#8884d8" barSize={30} />
-        </BarChart> */}
+        </BarChart>  */}
         {/* <div>
         <br></br>
         <h2>30-Day Price Data for </h2>
