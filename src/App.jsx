@@ -4,6 +4,8 @@ import Header from './components/Header'
 import NavBar from './components/NavBar'
 import List from './components/List'
 import Card from './components/Card'
+import Nutrients from './components/Nutrients'
+import ChartTest from './components/ChartTest'
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
@@ -46,6 +48,8 @@ function App() {
               <div> </div>}
           </div>
         </div>
+
+       
 
 
       </div>
