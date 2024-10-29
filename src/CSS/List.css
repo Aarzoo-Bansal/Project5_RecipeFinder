@@ -57,3 +57,16 @@ table {
     align-items: center;
     margin-left: 11% !important;
   }
+
+  .linkStyle{
+    width: 500px;
+  }
+
+a {
+    text-decoration: underline;
+
+}
+
+a:hover{
+    box-shadow: rgba(255, 255, 255, 0.87);
+}

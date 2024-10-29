@@ -13,13 +13,14 @@ function App() {
   useEffect(() => {
     const fetchRandomRecipe = async () => {
       const respone = await fetch(
-        "https://api.spoonacular.com/recipes/complexSearch?query=pasta&query=pizza&addRecipeNutrition=true&number=12&apiKey="
+        "https://api.spoonacular.com/recipes/complexSearch?query=pasta&query=pizza&addRecipeNutrition=true&number=2&apiKey="
         + API_KEY
       );
 
       const recipes = await respone.json();
       setRecipeList(recipes.results)
       console.log(recipes.results)
+
     }
 
     fetchRandomRecipe().catch(console.error);

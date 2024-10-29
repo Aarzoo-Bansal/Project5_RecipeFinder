@@ -1,0 +1,39 @@
+.details {
+    text-align: center;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    background: rgba(226, 221, 221, 0.9);
+    box-shadow: 0 15px 25px hsla(0, 2%, 50%, .2);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    padding: 5px;
+    width: auto;
+
+}
+
+.detailsOfP {
+    margin-top: 0;
+    font-size: medium;
+}
+
+.cardSummary {
+    border-radius: 24px;
+    font-size: medium;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    background: rgba(226, 221, 221, 0.9);
+    box-shadow: 0 15px 25px hsla(0, 2%, 50%, .2);
+    margin-bottom: 30px;
+    width: auto;
+    padding: 20px;
+}
+
+  .images{
+    box-shadow: 0 4px 8px 0 rgba(226, 221, 221, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(226, 221, 221, 0.9);
+    box-shadow: 0 15px 25px hsla(0, 2%, 50%, .9);
+    padding: 5px;
+    border-radius: 24px;
+  }

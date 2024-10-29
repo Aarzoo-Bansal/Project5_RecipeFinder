@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '/src/CSS/List.css'
+import { Link } from "react-router-dom";
+
 
 const List = ({ recipeList }) => {
     const [isVeg, setIsVeg] = useState("");
@@ -99,7 +101,15 @@ const List = ({ recipeList }) => {
                         {recipeResult &&
                             recipeResult.map(recipe => (
                                 <tr key={recipe.id}>
-                                    <td>{recipe.title}</td>
+                                    <td>
+                                    <Link 
+                                    to={`/recipeDetails/${recipe.id}`}
+                                    key={recipe.id}
+                                    >
+                                        {recipe.title}
+                                    </Link>
+                                    </td>
+                                    
                                     <td>{recipe.healthScore}</td>
                                     <td>{recipe.readyInMinutes}</td>
                                     <td>{recipe.dairyFree ? "Yes" : "No"}</td>

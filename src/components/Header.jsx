@@ -7,7 +7,7 @@ const Header = () => {
         <div className="header">
             <img
                 className="icon"
-                src='src/assets/Icons/icon2.png'
+                src='/src/assets/Icons/icon2.png'
                 alt="Icon Preset" />
 
             <h3>RecipeFinder</h3>
